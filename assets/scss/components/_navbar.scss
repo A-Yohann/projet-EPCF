@@ -1,0 +1,14 @@
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            font-size: 2rem;
+            padding-left: 20px;
+        }
+    }
+}

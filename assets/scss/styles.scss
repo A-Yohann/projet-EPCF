@@ -6,10 +6,15 @@
 @use "base/typographie";
 @use "base/base";
 @use "base/responsive";
+@use "base/utils.scss";
 
 // PARTIE DOSSIER COMPONENTS
 @use "components/button";
 @use "components/navbar";
+@use "components/hero";
+@use "components/about";
+@use "components/diplomes";
+@use "components/competences";
 
 // PARTIE DOSSIER LAYOUT
 @use "layout/footer";

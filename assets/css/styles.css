@@ -1,3 +1,190 @@
+.font {
+  color: #F7D6E0;
+}
 
+.fonts {
+  color: #BC002D;
+}
+
+.bg-primary {
+  background-color: #F7D6E0;
+}
+
+.skill {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: -#BC002D;
+  color: -#F7D6E0;
+  border: none;
+  border-radius: 8px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/static/Roboto-Regular.ttf);
+}
+body {
+  font-family: "Roboto Regular", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  padding-left: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+}
+.hero .flex-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero .flex-hero .profil img {
+  width: 200px;
+  border-radius: 8px;
+  padding-top: 30px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20%;
+}
+.about > div:first-child {
+  width: 70%;
+}
+.about .language {
+  width: 30%;
+  flex-shrink: 0;
+}
+.about .language ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+.about .language li {
+  list-style: none;
+}
+.about .language li img {
+  width: 100%;
+  display: block;
+}
+
+.diplomes h2 {
+  text-align: center;
+}
+.diplomes .carousel {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+.diplomes .carousel .carousel-container {
+  overflow: hidden;
+}
+.diplomes .carousel .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.diplomes .carousel .carousel-track li {
+  min-width: 100%;
+}
+.diplomes .carousel .carousel-track li img {
+  width: 100%;
+  display: block;
+}
+.diplomes .carousel .carousel-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.diplomes .carousel .carousel-buttons button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.competences {
+  text-align: center;
+  padding: 30px 0;
+}
+.competences h2 {
+  margin-bottom: 30px;
+}
+.competences .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.competences .skills .row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.competences .skills .skill {
+  background-color: #c4002a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  min-width: 200px;
+  min-height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+footer img {
+  width: 10%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+header img {
+  width: 10%;
+}
 
 /*# sourceMappingURL=styles.css.map */

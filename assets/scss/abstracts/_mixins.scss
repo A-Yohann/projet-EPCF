@@ -1,0 +1,36 @@
+@mixin skill ($bg-color, $text-color) {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: 8px;
+    
+}
+
+@mixin bg-primary {
+    background-color: #F7D6E0;
+}
+
+@mixin font {
+    color: #F7D6E0;
+}
+.font{
+    color: #F7D6E0;
+}
+
+@mixin fonts {
+    color: #BC002D;
+}
+
+.fonts{
+    @include fonts
+}
+
+.bg-primary {
+    @include bg-primary
+}
+
+.skill {
+    @include skill(-#BC002D, -#F7D6E0)
+}
