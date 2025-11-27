@@ -25,3 +25,24 @@ prevBtn.addEventListener('click', () => {
 // Met à jour la position au chargement
 window.addEventListener('resize', updateCarousel);
 updateCarousel();
+
+
+// Gestion onglets
+const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    const target = tab.dataset.target;
+    tabContents.forEach(tc => {
+      tc.classList.remove("active");
+      if(tc.id === target) tc.classList.add("active");
+    });
+
+    updateTotal();
+  });
+});
+

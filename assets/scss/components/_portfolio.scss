@@ -1,0 +1,34 @@
+.titre{
+    text-align: center;
+}
+
+.flex-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}.card-border{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 20%;
+    height: 50%;
+
+    .card-content{
+        h2{
+            text-align: center;
+            
+        }.btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        .card-img{
+            img{
+                max-width: 100%;
+            }
+        }
+
+    }
+}
+

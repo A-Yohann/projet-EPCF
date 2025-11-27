@@ -1,14 +1,14 @@
 
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    width: 140px;          
-    height: 100vh;          
-    background-color: #BC002D; 
-    z-index: -1;          
-}
+// body::before,
+// body::after {
+//     content: "";
+//     position: fixed;
+//     top: 0;
+//     width: 140px;          
+//     height: 100vh;          
+//     background-color: #BC002D; 
+//     z-index: -1;          
+// }
 
 /* Bande gauche */
 body::before {

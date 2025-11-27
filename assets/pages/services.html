@@ -21,7 +21,81 @@
         </nav>
     </header>
     <main>
+       <section class="services container">
+  <h2>Services de développement Backend</h2>
 
+ <form id="devis-formulaire">
+        <h2>Services Backend</h2>
+        
+        <div class="service-item">
+            <input type="checkbox" id="api-rest" data-prix="500" />
+            <label for="api-rest">Création d'une API REST sécurisée</label>
+            <span>(500 €)</span>
+        </div>
+
+        <div class="service-item">
+            <input type="checkbox" id="db-setup" data-prix="300" />
+            <label for="db-setup">Mise en place et configuration de base de données</label>
+            <span>(300 €)</span>
+        </div>
+
+        <div class="service-item">
+            <input type="checkbox" id="auth-module" data-prix="400" />
+            <label for="auth-module">Module d'authentification (connexion/inscription)</label>
+            <span>(400 €)</span>
+        </div>
+        
+        <hr>
+
+        <div id="total-section">
+            <h3>Prix Total Estimé (HT) :</h3>
+            <span id="prix-total">0 €</span>
+        </div>
+
+        <button type="button" id="generer-devis">Générer le devis</button>
+    </form>
+
+    <div id="recapitulatif">
+        <div class="devis-header">
+            <h2>📝 Devis Estimatif</h2>
+            <div class="devis-meta">
+                <p>Réf. : <span id="devis-ref"></span></p>
+                <p>Date : <span id="devis-date"></span></p>
+            </div>
+        </div>
+        
+        <div class="services-table">
+            <div class="table-headers">
+                <span class="service-designation">Désignation</span>
+                <span class="service-unite">Qté/Unité</span>
+                <span class="service-prix-unitaire">Prix Unitaire HT</span>
+                <span class="service-total-ht">Total HT</span>
+            </div>
+            
+            <ul id="liste-services">
+                </ul>
+        </div>
+        
+        <hr>
+        
+        <div class="devis-totals">
+            <p>Total Hors Taxes (HT) : <span id="total-ht">0 €</span></p>
+            <p>TVA (20%) : <span id="montant-tva">0 €</span></p>
+            
+            <p class="final-total">
+                <strong>TOTAL TTC : <span id="total-final">0 €</span></strong>
+            </p>
+        </div>
+        
+        <div class="devis-footer">
+            <h3>Conditions Générales</h3>
+            <p>Validité de l'offre : 30 jours. Début des travaux après signature et paiement d'un acompte de 30%.</p>
+        </div>
+        
+        <div id="action-buttons">
+            </div>
+    </div>
+</section>
     </main>
     <footer class="bg-primary">
         <img src="../img/logo.png" alt="logo du site">
@@ -34,5 +108,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="../js/services.js"></script>
 </body>
 </html>
