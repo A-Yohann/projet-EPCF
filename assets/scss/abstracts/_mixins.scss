@@ -1,4 +1,4 @@
-@mixin skill ($bg-color, $text-color) {
+@mixin btn ($bg-color, $text-color) {
     padding: 10px 20px;
     font-size: 14px;
     background-color: $bg-color;
@@ -6,6 +6,9 @@
     border: none;
     border-radius: 8px;
     
+}
+.btn {
+    @include btn(-#BC002D, -#F7D6E0)
 }
 
 @mixin bg-primary {
@@ -31,6 +34,3 @@
     @include bg-primary
 }
 
-.skill {
-    @include skill(-#BC002D, -#F7D6E0)
-}
