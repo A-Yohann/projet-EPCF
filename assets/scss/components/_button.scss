@@ -1,0 +1,17 @@
+@use "../abstracts/variables";
+.flex-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}   .btn{
+    background-color: variables.$titre-color;
+    width: 50%;
+
+    a{
+        text-decoration: none;
+        color: variables.$p-color;
+    }
+    
+}
+

@@ -1,0 +1,24 @@
+.card-border{
+    border: 1px solid grey;
+    border-radius: 8px;
+    width: 40%;
+
+    .card-content{
+        background-color: #F7D6E0;
+        height: 380px;
+
+       
+        .card-img{
+            width: 100%; 
+
+            img{
+                width: 100%;
+                height: 260px;        
+                object-fit: cover;
+                object-position: center;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+        }
+    }
+}

@@ -1,9 +1,41 @@
+@use "../abstracts/variables";
+
 footer{
+    padding: 0;
+    margin: 0;
+    .flex-footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 10px;
+    align-items: center;
+        .navbar ul{
+            display: flex;
+            flex-direction: column;
+            
+        }.contact-footer ul{
+            list-style: none;
+            font-size: 1.5rem
+            
+        }.socials {
+            padding: 30px;
+            li{
+    
+            list-style-type:none;
+            a{
+                color: variables.$titre-color;
+            }
+        }
+
+        }
+       
+        
     img{
-        width: 10%;
+        width: 20%;
+    }
+
+    
+}p{
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
 }

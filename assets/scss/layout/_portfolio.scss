@@ -1,0 +1,26 @@
+@use '../components/cards';
+@use "../abstracts/variables";
+.titre{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.flex-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 30px;
+}h2{
+            text-align: center;
+            color: variables.$titre-color;
+        }
+
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
