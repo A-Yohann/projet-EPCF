@@ -428,6 +428,10 @@ h2 {
   display: none;
 }
 
+h1 {
+  color: #BC002D;
+}
+
 hr {
   border: none;
   border-top: 1px solid #ddd;
