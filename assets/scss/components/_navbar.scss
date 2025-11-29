@@ -1,6 +1,8 @@
+@use '../abstracts/variables';
+@use "../base/responsive";
+
 .navbar ul{
     display: flex;
-    flex-direction: row;
     gap: 2rem;
 
     li{
@@ -9,6 +11,20 @@
             text-decoration: none;
             font-size: 2rem;
             padding-left: 20px;
+            
+
+            &:hover{
+                text-decoration: underline;
+                ;
+            }
         }
     }
+}
+
+
+
+.burger-icon img{
+    width: 100%;
+    height: 100%;
+            
 }
