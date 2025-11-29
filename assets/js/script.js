@@ -5,44 +5,36 @@ const prevBtn = document.querySelector('.prev');
 
 let currentIndex = 0;
 
+// Met à jour la position du carrousel
 function updateCarousel() {
     const width = slides[0].getBoundingClientRect().width;
     track.style.transform = `translateX(-${currentIndex * width}px)`;
 }
 
+// Boutons
 nextBtn.addEventListener('click', () => {
-    currentIndex++;
-    if (currentIndex >= slides.length) currentIndex = 0; // boucle
+    currentIndex = (currentIndex + 1) % slides.length;
     updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
-    currentIndex--;
-    if (currentIndex < 0) currentIndex = slides.length - 1; // boucle
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     updateCarousel();
 });
 
-// Met à jour la position au chargement
-window.addEventListener('resize', updateCarousel);
-updateCarousel();
-
-
-// Gestion onglets
-const tabs = document.querySelectorAll(".tab");
-const tabContents = document.querySelectorAll(".tab-content");
-
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(t => t.classList.remove("active"));
-    tab.classList.add("active");
-
-    const target = tab.dataset.target;
-    tabContents.forEach(tc => {
-      tc.classList.remove("active");
-      if(tc.id === target) tc.classList.add("active");
-    });
-
-    updateTotal();
-  });
+// Swipe mobile
+let startX = 0;
+track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+track.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) { // swipe gauche
+        currentIndex = (currentIndex + 1) % slides.length;
+    } else if (endX - startX > 50) { // swipe droite
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    }
+    updateCarousel();
 });
 
+// Recalcule la largeur au redimensionnement
+window.addEventListener('resize', updateCarousel);
+updateCarousel();

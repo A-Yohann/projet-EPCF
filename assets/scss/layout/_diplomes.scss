@@ -8,36 +8,42 @@
         width: 100%;
         max-width: 600px;       
         margin: auto;
+        position: relative; // Pour positionner les boutons
 
         .carousel-container {
-            overflow: hidden;
+            overflow: hidden; // Cache les slides hors vue
         }
 
         .carousel-track {
-            display: flex;
+            display: flex; // Met les slides sur une ligne
             transition: transform 0.5s ease;
             list-style: none;
             padding: 0;
             margin: 0;
+            width: 100%;
 
-            li {
-                min-width: 100%;
-                
-                img {
-                    width: 100%;
-                    display: block;
-                }
+            img{
+                max-width: 100%;
             }
         }
 
         .carousel-buttons {
-            margin-top: 10px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: space-between;
+            transform: translateY(-50%);
 
             button {
-                padding: 5px 10px;
+                background: rgba(0,0,0,0.5);
+                color: white;
+                border: none;
+                padding: 10px 15px;
                 cursor: pointer;
+                border-radius: 50%;
+                font-size: 20px;
             }
         }
     }

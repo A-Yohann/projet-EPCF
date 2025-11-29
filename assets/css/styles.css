@@ -108,6 +108,20 @@ body {
     align-items: center;
   }
 }
+@media screen and (max-width: 375px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .skill {
+    min-height: 100px;
+  }
+}
 .container {
   width: 100%;
   max-width: 1080px;
@@ -281,7 +295,6 @@ body::after {
   font-weight: bold;
   display: inline-block;
   min-width: 200px;
-  min-height: 100px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -422,6 +435,7 @@ body::after {
   width: 100%;
   max-width: 600px;
   margin: auto;
+  position: relative;
 }
 .diplomes .carousel .carousel-container {
   overflow: hidden;
@@ -432,22 +446,28 @@ body::after {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.diplomes .carousel .carousel-track li {
-  min-width: 100%;
-}
-.diplomes .carousel .carousel-track li img {
   width: 100%;
-  display: block;
+}
+.diplomes .carousel .carousel-track img {
+  max-width: 100%;
 }
 .diplomes .carousel .carousel-buttons {
-  margin-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
+  transform: translateY(-50%);
 }
 .diplomes .carousel .carousel-buttons button {
-  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
   cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
 }
 
 .card-border {

@@ -105,3 +105,27 @@
     }
     
 }
+
+// PARTIE RESPONSIVE COMPETENCE 
+
+@media screen and (max-width:375px) {
+    .row{
+        flex-direction: column;
+        align-items: center;
+    
+        
+    }.skill{
+        width: 50px;
+        
+
+    }
+    
+}
+
+
+@media screen and (max-width:1440px) {
+    .skill{
+        min-height: 100px;
+    }
+    
+}
