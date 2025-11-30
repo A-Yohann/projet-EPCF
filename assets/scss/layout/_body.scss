@@ -1,0 +1,53 @@
+.falling-petals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+
+  span {
+    position: absolute;
+    top: -5%;
+    opacity: 0.9;
+    user-select: none;
+    animation-name: fallAndSway;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &::before {
+      content: "🌸";
+      display: block;
+    }
+
+    // Variations par enfant : position, taille, durée
+    &:nth-child(1) { left: 5%;  font-size: 20px; animation-duration: 12s; }
+    &:nth-child(2) { left: 15%; font-size: 25px; animation-duration: 10s; }
+    &:nth-child(3) { left: 25%; font-size: 18px; animation-duration: 14s; }
+    &:nth-child(4) { left: 40%; font-size: 22px; animation-duration: 11s; }
+    &:nth-child(5) { left: 55%; font-size: 24px; animation-duration: 13s; }
+    &:nth-child(6) { left: 65%; font-size: 20px; animation-duration: 15s; }
+    &:nth-child(7) { left: 75%; font-size: 26px; animation-duration: 12.5s; }
+    &:nth-child(8) { left: 85%; font-size: 21px; animation-duration: 14.5s; }
+    &:nth-child(9) { left: 50%; font-size: 19px; animation-duration: 13s; }
+    &:nth-child(10){ left: 30%; font-size: 23px; animation-duration: 12s; }
+  }
+}
+
+// Animation combinée chute + sway + rotation
+@keyframes fallAndSway {
+  0% {
+    transform: translateX(0) translateY(-10vh) rotate(0deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateX(30px) translateY(50vh) rotate(180deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0) translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}

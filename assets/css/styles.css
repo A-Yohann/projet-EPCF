@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn {
   padding: 10px 20px;
   font-size: 14px;
@@ -164,6 +165,31 @@ body {
 .burger-icon img {
   width: 100%;
   height: 100%;
+}
+
+.card-border {
+  border: 1px solid grey;
+  border-radius: 8px;
+  width: 40%;
+}
+.card-border:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+.card-border .card-content {
+  background-color: #F7D6E0;
+  height: 380px;
+}
+.card-border .card-content .card-img {
+  width: 100%;
+}
+.card-border .card-content .card-img img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 footer {
@@ -470,31 +496,6 @@ body::after {
   font-size: 20px;
 }
 
-.card-border {
-  border: 1px solid grey;
-  border-radius: 8px;
-  width: 40%;
-}
-.card-border:hover {
-  transform: scale(1.1);
-  transition: 0.3s ease;
-}
-.card-border .card-content {
-  background-color: #F7D6E0;
-  height: 380px;
-}
-.card-border .card-content .card-img {
-  width: 100%;
-}
-.card-border .card-content .card-img img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  object-position: center;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
 .titre {
   text-align: center;
   font-size: 2rem;
@@ -719,6 +720,95 @@ hr {
 }
 .print-button:hover {
   background-color: #1e7e34;
+}
+
+.falling-petals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+.falling-petals span {
+  position: absolute;
+  top: -5%;
+  opacity: 0.9;
+  user-select: none;
+  animation-name: fallAndSway;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.falling-petals span::before {
+  content: "🌸";
+  display: block;
+}
+.falling-petals span:nth-child(1) {
+  left: 5%;
+  font-size: 20px;
+  animation-duration: 12s;
+}
+.falling-petals span:nth-child(2) {
+  left: 15%;
+  font-size: 25px;
+  animation-duration: 10s;
+}
+.falling-petals span:nth-child(3) {
+  left: 25%;
+  font-size: 18px;
+  animation-duration: 14s;
+}
+.falling-petals span:nth-child(4) {
+  left: 40%;
+  font-size: 22px;
+  animation-duration: 11s;
+}
+.falling-petals span:nth-child(5) {
+  left: 55%;
+  font-size: 24px;
+  animation-duration: 13s;
+}
+.falling-petals span:nth-child(6) {
+  left: 65%;
+  font-size: 20px;
+  animation-duration: 15s;
+}
+.falling-petals span:nth-child(7) {
+  left: 75%;
+  font-size: 26px;
+  animation-duration: 12.5s;
+}
+.falling-petals span:nth-child(8) {
+  left: 85%;
+  font-size: 21px;
+  animation-duration: 14.5s;
+}
+.falling-petals span:nth-child(9) {
+  left: 50%;
+  font-size: 19px;
+  animation-duration: 13s;
+}
+.falling-petals span:nth-child(10) {
+  left: 30%;
+  font-size: 23px;
+  animation-duration: 12s;
+}
+
+@keyframes fallAndSway {
+  0% {
+    transform: translateX(0) translateY(-10vh) rotate(0deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateX(30px) translateY(50vh) rotate(180deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0) translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

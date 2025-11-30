@@ -1,0 +1,49 @@
+/* Conteneur global */
+.falling-petals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* les pétales ne bloquent pas les clics */
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Style générique d’un pétale */
+.falling-petals span {
+    position: absolute;
+    top: -10%;
+    width: 30px;
+    height: 30px;
+    background-image:url(../img/fleurs.png); /* ← mets ton image ici */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    animation: fall 12s linear infinite, sway 4s ease-in-out infinite;
+}
+
+/* Animation de chute */
+@keyframes fall {
+    0%   { transform: translateY(-10vh) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Animation gauche-droite */
+@keyframes sway {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(40px); }
+    100% { transform: translateX(0); }
+}
+
+/* Variations des pétales — positions, vitesses, tailles */
+.falling-petals span:nth-child(1) { left: 5%; animation-duration: 13s, 4s; width: 25px; height: 25px; }
+.falling-petals span:nth-child(2) { left: 15%; animation-duration: 11s, 3s; }
+.falling-petals span:nth-child(3) { left: 25%; animation-duration: 10s, 5s; width: 35px; height: 35px; }
+.falling-petals span:nth-child(4) { left: 40%; animation-duration: 14s, 4s; }
+.falling-petals span:nth-child(5) { left: 55%; animation-duration: 12s, 3s; }
+.falling-petals span:nth-child(6) { left: 65%; animation-duration: 9s, 4s; width: 20px; height: 20px; }
+.falling-petals span:nth-child(7) { left: 75%; animation-duration: 15s, 6s; }
+.falling-petals span:nth-child(8) { left: 85%; animation-duration: 12s, 5s; width: 30px; height: 30px; }
+.falling-petals span:nth-child(9) { left: 50%; animation-duration: 10s, 3s; }
+.falling-petals span:nth-child(10) { left: 30%; animation-duration: 13s, 6s; }

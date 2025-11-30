@@ -1,6 +1,6 @@
 // PARTIE DOSSIER ABSTRACT
 @use "abstracts/mixins";
-@use "abstracts/variables" as variable;
+@use "abstracts/variables" as variables;
 
 // PARTIE DOSSIER BASE 
 @use "base/typographie";
@@ -11,6 +11,8 @@
 // PARTIE DOSSIER COMPONENTS
 @use "components/button";
 @use "components/navbar";
+@use "components/cards";
+
 
 
 // PARTIE DOSSIER LAYOUT
@@ -23,4 +25,5 @@
 @use "layout/diplomes";
 @use "layout/portfolio";
 @use "layout/hero";
-@use "layout/services"
+@use "layout/services";
+@use "layout/body";
