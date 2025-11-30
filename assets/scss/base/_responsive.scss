@@ -41,15 +41,15 @@
 @media screen and (max-width:900px) {
     .burger-icon{
         display: block;
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
 
     }
 
     .burger-menu{
         position: absolute;
         z-index: 2;
-        top: 80px;
+        top: 10px ;
         width: 100%;
         background-color: variables.$p-color;
     }
@@ -67,7 +67,7 @@
 
     .nav-menu {
         position: absolute;
-        top: 128px;
+        top: 90px;
         display: flex;
         width: 100%;
         left: 0;
@@ -130,5 +130,5 @@
     
 }
 
-// responsive partie formation
+
 
