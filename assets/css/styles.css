@@ -271,28 +271,42 @@ body::after {
   font-size: 24px;
   text-align: center;
 }
-.about .language {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
 .about .language ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
-  list-style: none;
+  gap: 30px;
 }
-.about .language li {
-  display: block;
+.about .language ul li img {
+  width: 200px;
+  transition: transform 0.3s ease;
+  animation: float 3s ease-in-out infinite;
 }
-.about .language li img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  display: block;
+.about .language ul li img:nth-child(1) {
+  animation-delay: 0s;
+}
+.about .language ul li img:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.about .language ul li img:nth-child(3) {
+  animation-delay: 1s;
+}
+.about .language ul li img:nth-child(4) {
+  animation-delay: 1.5s;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .competences {
